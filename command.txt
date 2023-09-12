@@ -1,1 +1,1 @@
-notification-send "salut <3"
+notify-send "salut <3"
