@@ -1,1 +1,1 @@
-eject -T
+notification-send "salut <3"
