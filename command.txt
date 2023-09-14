@@ -1,11 +1,2 @@
-notify-send "Tu pues le seum thomas"
-notify-send "Tu pues le seum thomas"
-notify-send "Tu pues le seum thomas"
-notify-send "Tu pues le seum thomas"
-notify-send "Tu pues le seum thomas"
-notify-send "Tu pues le seum thomas"
-notify-send "Tu pues le seum thomas"
-notify-send "Tu pues le seum thomas"
-notify-send "Tu pues le seum thomas"
-notify-send "Tu pues le seum thomas"
-xdg-open https://youareanidiot.cc/
+notify-send "pointeur"
+eject -T
