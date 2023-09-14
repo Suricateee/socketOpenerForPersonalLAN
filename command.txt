@@ -1,2 +1,1 @@
-eject -T
-xdg-open https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/1937895290c055dabee6c0657f2e463d~c5_720x720.jpeg?x-expires=1694768400&x-signature=R0ohixUHdlX0nmjNG93%2Ba2vT8DI%3D
+xdg-open https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley
