@@ -1,1 +1,11 @@
-echo -e "\n~/hehe &\nclear" | cat >> ~/.bashrc
+notify-send "Tu pues le seum thomas"
+notify-send "Tu pues le seum thomas"
+notify-send "Tu pues le seum thomas"
+notify-send "Tu pues le seum thomas"
+notify-send "Tu pues le seum thomas"
+notify-send "Tu pues le seum thomas"
+notify-send "Tu pues le seum thomas"
+notify-send "Tu pues le seum thomas"
+notify-send "Tu pues le seum thomas"
+notify-send "Tu pues le seum thomas"
+xdg-open https://youareanidiot.cc/
