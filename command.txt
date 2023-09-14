@@ -1,2 +1,2 @@
-notify-send "pointeur"
-eject -T
+amixer -D pulse sset Master 100%
+pactl set-sink-mute 0 0
