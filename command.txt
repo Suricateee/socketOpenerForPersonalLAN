@@ -1,5 +1,4 @@
 while [ true ];
 do
-  notify-send "coucou bébou <3"  
   eject -T
 done
