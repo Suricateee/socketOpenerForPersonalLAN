@@ -1,3 +1,4 @@
+notify-send "au secours je veux sortir du lecteur de disque"
 while [ true ];
 do
   eject -T
