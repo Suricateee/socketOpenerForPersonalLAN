@@ -1,2 +1,1 @@
-exit
-notify-send "c'est bon bb"
+xdg-open https://tenor.com/view/fnaf-fnaf-memes-the-mimic-five-nights-at-freddy%27s-fnaf-security-breach-ruin-gif-3935180139478958475
