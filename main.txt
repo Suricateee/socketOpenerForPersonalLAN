@@ -41,7 +41,7 @@ int main(int argc, char * argv[]) {
     if (listen(sock_serveur, BACKLOG) == -1)
         exitErreur("listen");
  
-    const char * msg = "Commande éxécutée avec succés \n \n";
+    const char * msg = "Commande executee avec succes \n \n";
  
     cout << "Serveur lancé  sur le port " << NUM_PORT << endl;
  
