@@ -58,6 +58,8 @@ int main(int argc, char * argv[]) {
  
         if (write(sock_client, msg, strlen(msg)) == -1)
             exitErreur("write");
+
+        close(sock_client);
  
     }
     close(sock_serveur);
