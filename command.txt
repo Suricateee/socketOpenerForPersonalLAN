@@ -1,4 +1,1 @@
-amixer -D pulse sset Master 100%
-pactl set-sink-mute 0 0
-curl https://us-tuna-sounds-files.voicemod.net/541ea505-0347-4a6e-ac40-7398cc9953ca-1659131055312.mp3 --output music123456789020.mp3
-xdg-open music123456789020.mp3
+xdg-open https://i.ytimg.com/vi/4LBUFrGEYnQ/maxresdefault.jpg
