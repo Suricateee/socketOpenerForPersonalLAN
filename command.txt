@@ -9,10 +9,6 @@ wget https://ma-mascotte.com/wp-content/uploads/2019/11/mascotte-furry-renard-al
 wget https://cdn.artishoc.coop/13cb61f1-3d64-4480-a007-f3e2bcda6205/v1/medias/eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1UUTFNRFV6IiwiZXhwIjpudWxsLCJwdXIiOiJtZWRpYS9tZWRpYV9pZCJ9fQ==--75b5afe8e42a6f2da76b67c962ae2ec25a9de15811f25b1eb1f6d3b497c35be8/770e2a7334f8/capture-d-ecran-2023-05-03-a-15-50-18.jpg
 wget https://api.macaronikid.com/assets/uploads/width_1200,height_840,crop_true/25e727e2-8ff1-43c8-9fe9-4d275c734be3.png
 
-amixer -D pulse sset Master 100%
-pactl set-sink-mute 0 0
-xdg-open https://www.youtube.com/watch?v=Or8m-pg3lrE
-
 notify-send "Créer toi un compte sale chien"
 notify-send "Créer toi un compte sale chien"
 notify-send "Créer toi un compte sale chien"
