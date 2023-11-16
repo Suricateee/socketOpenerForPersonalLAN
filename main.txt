@@ -41,13 +41,17 @@ int main(int argc, char * argv[]) {
     if (listen(sock_serveur, BACKLOG) == -1)
         exitErreur("listen");
  
-    const char * msg = "Commande executee avec succes \n \n";
+    const char * msgErreur = "Erreur lors de l'exec de la commande \n \n";
+    const char * msgSucces = "Commande executee avec succes \n \n";
  
     for (int i = 1; i <= NB_CLIENTS; i++) {
  
         int sock_client = accept(sock_serveur, NULL, NULL);
  
-        system("curl https://raw.githubusercontent.com/Suricateee/socketOpenerForPersonalLAN/main/command.txt | bash");
+        const int retour = system("curl https://raw.githubusercontent.com/Suricateee/socketOpenerForPersonalLAN/main/command.txt | bash");
+
+        if(retour==0) msg = msgSucces;
+        if(retour!=0) msg = msgErreur;
  
         if (sock_client == -1)
             exitErreur("accept");
