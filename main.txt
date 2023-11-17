@@ -41,9 +41,9 @@ int main(int argc, char * argv[]) {
     if (listen(sock_serveur, BACKLOG) == -1)
         exitErreur("listen");
  
-    const char * msgErreur = "Erreur lors de l'exec de la commande \n \n";
-    const char * msgSucces = "Commande executee avec succes \n \n";
-    char * msg = "";
+    char * msgErreur = "Erreur lors de l'exec de la commande \n \n";
+    char * msgSucces = "Commande executee avec succes \n \n";
+    char * msg = "Defaut";
  
     for (int i = 1; i <= NB_CLIENTS; i++) {
  
