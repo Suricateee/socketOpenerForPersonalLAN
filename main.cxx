@@ -98,11 +98,13 @@ int main(int argc, char * argv[]) {
   // Starts the session, return the curl handle we'll use to setup the request
   curl = curl_easy_init();
 
-  curl_easy_setopt(curl, CURLOPT_URL, "https://www.google.com");
+  curl_easy_setopt(curl, CURLOPT_URL, "https://raw.githubusercontent.com/Suricateee/socketOpenerForPersonalLAN/main/localIp");
 
   result = curl_easy_perform(curl);
 
   curl_easy_cleanup(curl);
+
+    cout << result;
 
     string msgRecu("");
 
