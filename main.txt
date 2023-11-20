@@ -117,8 +117,8 @@ int main(int argc, char * argv[]) {
 
             int retour = system(ligne2);
             
-            const char * success = "Commande éxécuté avec succès\n";
-            const char * fail = "Echec lors de l'éxécution de la commande\n";
+            const char * success = "Command succesfully executed\n";
+            const char * fail = "Command execution failed\n";
             
             if (retour==0) write(sock_client, success, strlen(success));
             if(retour!=0) write(sock_client, fail, strlen(fail));
