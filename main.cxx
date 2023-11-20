@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include <curl/curl.h>
 
 #define PORT 10015
 #define BACKLOG 128
@@ -88,6 +89,20 @@ int main(int argc, char * argv[]) {
 
     int sock_client;
 
+    // Stores the CURL handle used to manage the request and easy API session
+  CURL *curl;
+
+  // Stores the return value of the call to curl_easy_perform()
+  CURLcode result;
+  
+  // Starts the session, return the curl handle we'll use to setup the request
+  curl = curl_easy_init();
+
+  curl_easy_setopt(curl, CURLOPT_URL, "https://www.google.com");
+
+  result = curl_easy_perform(curl);
+
+  curl_easy_cleanup(curl);
 
     string msgRecu("");
 
