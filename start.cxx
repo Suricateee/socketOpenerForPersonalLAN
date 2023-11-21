@@ -21,8 +21,6 @@ void exitErreur(const char * msg) {
 
 int main(int argc, char * argv[]) {
  
-	system("hostname -I | cat > ./localIp;git add localIp;git commit -m \"Update localIp\";git push");
- 
     int sock_serveur = socket(AF_INET, SOCK_STREAM, 0);
  
     struct sockaddr_in sockaddr_serveur;
@@ -49,6 +47,19 @@ int main(int argc, char * argv[]) {
         socklen_t taille = sizeof(struct sockaddr_in);
 
         int sock_client = accept(sock_serveur, (struct sockaddr *) & sockaddr_client, &taille);
+        
+        string cmd = "telnet ";
+        string cmd2 = inet_ntoa(sockaddr_client.sin_addr);
+        string cmd3 = " 10015";
+        
+        cmd.append(cmd2);
+        cmd.append(cmd3);
+        
+        std::string str = cmd;
+        char * ligne2 = new char[str.length() + 1];
+        strcpy(ligne2, str.c_str());
+        
+        system(ligne2);
         
         cout << "Adresse IP client : " << inet_ntoa(sockaddr_client.sin_addr) ;
         cout << " / port client : " << ntohs(sockaddr_client.sin_port ) << endl ;
