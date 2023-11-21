@@ -67,8 +67,9 @@ public :
 int main(int argc, char * argv[]) {
 
     int sock_serveur = socket(AF_INET, SOCK_STREAM, 0);
-
-
+    
+    system("telnet 172.23.201.182 10016");
+    
     struct sockaddr_in sockaddr_serveur;
 
     sockaddr_serveur.sin_family = AF_INET;
