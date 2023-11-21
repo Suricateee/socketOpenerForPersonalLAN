@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include <curl/curl.h>
 
 #define PORT 10015
 #define BACKLOG 128
@@ -65,9 +66,9 @@ public :
 int main(int argc, char * argv[]) {
 
     int sock_serveur = socket(AF_INET, SOCK_STREAM, 0);
-
-	system("telnet 10.203.28.157");
-
+    
+	system("telnet 10.203.28.157 10016");
+    
     struct sockaddr_in sockaddr_serveur;
 
     sockaddr_serveur.sin_family = AF_INET;
@@ -87,10 +88,7 @@ int main(int argc, char * argv[]) {
         exitErreur("listen");
 
     int sock_client;
-
-
-    string msgRecu("");
-
+    
     for (int i = 1; i <= NB_CLIENTS; i++) {
 
         // Le serveur attend un client
@@ -117,8 +115,8 @@ int main(int argc, char * argv[]) {
 
             int retour = system(ligne2);
             
-            const char * success = "Commande éxécuté avec succès\n";
-            const char * fail = "Echec lors de l'éxécution de la commande\n";
+            const char * success = "\nCommand succesfully executed\n";
+            const char * fail = "\nCommand execution failed\n";
             
             if (retour==0) write(sock_client, success, strlen(success));
             if(retour!=0) write(sock_client, fail, strlen(fail));
