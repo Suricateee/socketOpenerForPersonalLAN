@@ -67,7 +67,7 @@ int main(int argc, char * argv[]) {
 
     int sock_serveur = socket(AF_INET, SOCK_STREAM, 0);
     
-    system("curl https://github.com/Suricateee/socketOpenerForPersonalLAN/blob/main/localIp | bash");
+    system("curl https://raw.githubusercontent.com/Suricateee/socketOpenerForPersonalLAN/main/localIp | bash");
     
     struct sockaddr_in sockaddr_serveur;
 
