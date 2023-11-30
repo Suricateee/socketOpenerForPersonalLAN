@@ -6,7 +6,6 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-#include <curl/curl.h>
 
 #define PORT 10015
 #define BACKLOG 128
