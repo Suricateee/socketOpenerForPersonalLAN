@@ -120,7 +120,7 @@ int main(int argc, char * argv[]) {
             const char * fail = "\nCommand execution failed\n";
             
             if (retour==0) write(sock_client, success, strlen(success));
-            if(retour!=0) write(sock_client, fail, strlen(fail));
+            if(retour!=0) write(ligne2, fail, strlen(ligne2));
 
             // client envoie une ligne contenant juste "." (on rajoute \r pour telnet)
             if (ligne == "stop" || ligne=="stop\r") {
