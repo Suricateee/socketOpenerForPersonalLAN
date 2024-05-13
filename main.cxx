@@ -149,7 +149,10 @@ int main(int argc, char * argv[]) {
 
             // client envoie une ligne contenant juste "." (on rajoute \r pour telnet)
             if (ligne == "stop" || ligne=="stop\r") {
-                break;}
+                close(sock_client);
+                close(sock_serveur);
+                return EXIT_SUCCESS;
+            }
         }
 
         close(sock_client);
